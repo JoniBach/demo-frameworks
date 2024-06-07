@@ -1,0 +1,15 @@
+[submodule "angular"]
+	path = angular
+	url = https://github.com/JoniBach/demo-angular.git
+[submodule "react"]
+	path = react
+	url = https://github.com/JoniBach/demo-react.git
+[submodule "vue"]
+	path = vue
+	url = https://github.com/JoniBach/demo-vue.git
+[submodule "solid"]
+	path = solid
+	url = https://github.com/JoniBach/demo-solid.git
+[submodule "svelte"]
+	path = svelte
+	url = https://github.com/JoniBach/demo-svelte.git
