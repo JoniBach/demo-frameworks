@@ -13,7 +13,7 @@
     "setup:svelte": "cd svelte && npm install",
     "setup:vue": "cd vue && npm install",
 
-    "start": "concurrently \"npm run kill\" \"npm run start:angular\" \"npm run start:react\" \"npm run start:solid\" \"npm run start:svelte\" \"npm run start:vue\"",
+    "start": "concurrently \"npm run start:angular\" \"npm run start:react\" \"npm run start:solid\" \"npm run start:svelte\" \"npm run start:vue\"",
     "start:angular": "cd angular && npm start",
     "start:react": "cd react && PORT=3002 npm start",
     "start:solid": "cd solid && npm start",
@@ -34,7 +34,8 @@
     "clearData:vue": "sudo node clear_data.js ./vue/public/data",
     "clearData:svelte": "sudo node clear_data.js ./svelte/public/data",
 
-    "kill": "concurrently \"npx kill-port 3001\" \"npx kill-port 3002\" \"npx kill-port 3003\" \"npx kill-port 3004\" \"npx kill-port 3005\""
+    "kill": "concurrently \"npx kill-port 3001\" \"npx kill-port 3002\" \"npx kill-port 3003\" \"npx kill-port 3004\" \"npx kill-port 3005\"",
+
 
   },
   "repository": {
