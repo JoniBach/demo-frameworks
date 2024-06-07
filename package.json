@@ -4,8 +4,9 @@
   "description": "This repository serves as a parent project for multiple demo projects, each individually version-controlled. This setup allows easy management and collaboration on multiple projects within a single repository using Git submodules.",
   "main": "index.js",
   "scripts": {
+    "launch": "npm run setup && npm run loadData && npm run start",
 
-    "setup": "npm run kill && npm run setup:angular && npm run setup:react && npm run setup:solid && npm run setup:svelte && npm run setup:vue",
+    "setup": "npm run setup:angular && npm run setup:react && npm run setup:solid && npm run setup:svelte && npm run setup:vue",
     "setup:angular": "cd angular && npm install",
     "setup:react": "cd react && npm install",
     "setup:solid": "cd solid && npm install",
