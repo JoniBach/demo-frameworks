@@ -9,9 +9,6 @@ if (!destinationPath) {
   process.exit(1);
 }
 
-// Define the source directory
-const sourceDir = path.join(__dirname, 'data');
-
 // Function to delete all contents in a directory recursively
 function deleteAllContents(dirPath) {
   if (fs.existsSync(dirPath)) {
@@ -33,19 +30,10 @@ function deleteAllContents(dirPath) {
 
 // Ensure the destination directory exists, if not, create it
 if (!fs.existsSync(destinationPath)) {
-  fs.mkdirSync(destinationPath, { recursive: true });
+  console.error(`The destination path ${destinationPath} does not exist.`);
+  process.exit(1);
 } else {
   // Delete existing files and directories in the destination directory
   deleteAllContents(destinationPath);
+  console.log('All existing data has been cleared successfully!');
 }
-
-// Copy files from source directory to the destination directory
-fs.readdirSync(sourceDir).forEach(file => {
-  const sourceFile = path.join(sourceDir, file);
-  const targetFile = path.join(destinationPath, file);
-
-  fs.copyFileSync(sourceFile, targetFile);
-  console.log(`Copied ${sourceFile} to ${targetFile}`);
-});
-
-console.log('All files copied successfully!');
