@@ -16,6 +16,12 @@
     "start:solid": "cd solid && npm start",
     "start:svelte": "cd svelte && npm start",
     "start:vue": "cd vue && npm start",
+    "loadData": "concurrently \"npm run loadData:angular\" \"npm run loadData:react\" \"npm run loadData:solid\" \"npm run loadData:svelte\" \"npm run loadData:vue\"",
+    "loadData:angular": "sudo node load_data.js ./angular/src/assets/data",
+    "loadData:react": "sudo node load_data.js ./react/public/data",
+    "loadData:solid": "sudo node load_data.js ./solid/public/data",
+    "loadData:vue": "sudo node load_data.js ./vue/public/data",
+    "loadData:svelte": "sudo node load_data.js ./svelte/public/data",
     "kill": "concurrently \"npx kill-port 3001\" \"npx kill-port 3002\" \"npx kill-port 3003\" \"npx kill-port 3004\" \"npx kill-port 3005\""
 
   },
